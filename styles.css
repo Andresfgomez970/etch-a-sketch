@@ -17,7 +17,7 @@ body{
 
 
 .header h1{
-    font-size: 35px;
+    font-size: 60px;
     color: rgb(44, 172, 214);
 }
 
@@ -30,6 +30,10 @@ button{
     border-radius: 8px;
     border: 1px solid  rgb(44, 172, 214);
     font-size: 15px;
+}
+
+.header button{
+    font-size: 20px;
 }
 
 .pressed-button{
@@ -46,13 +50,19 @@ button{
 
 .content{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 400px;
 }
 
 .content .buttons{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
+    font-size: 30px;
+}
+
+.content button{
+    font-size: 20px;
 }
 
 .colored{
@@ -72,8 +82,10 @@ button{
 }
 
 .footer{
+    text-align: center;
     margin-top: auto;
     background-color: rgb(44, 172, 214);
     padding: 8px;
     height: 40px;
+    font-size: 28px;
 }
