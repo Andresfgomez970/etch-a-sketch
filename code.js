@@ -274,7 +274,7 @@ function createGridElements(numberOfElements=16){
         buttons.append(button);
     }
 
-    names = [".Jamboard-mode", ".Rainbow-mode", ".Grey-mode", ".Permanent-pen", ".Eraser", ".Clean"]
+    names = [".Jamboard-mode", ".Rainbow-mode", ".Grey-mode", ".Permanent-pen", ".Eraser", ".Clean", ".Reset-pad-and-choose-grid-size"]
     jamboardModeButton = document.querySelector(names[0]);
     jamboardModeButton.addEventListener("click", activateJamboardMode)
     activateJamboardMode.buttonState = 0;
@@ -298,6 +298,11 @@ function createGridElements(numberOfElements=16){
     cleanModeButton = document.querySelector(names[5]);
     cleanModeButton.addEventListener("click", activateCleanMode);    
     activateCleanMode.buttonState = 0;
+
+    // add button to reset grid
+    resetButton = document.querySelector(names[6]);
+    // listener of the reset button to choose the number
+    resetButton.addEventListener("click", resetAndChooseGrid);
 
     color_state = 0;
     jamboardState = 0;
@@ -340,14 +345,9 @@ function createGridElements(numberOfElements=16){
 numberPerSide = 10;
 createGridElements(numberPerSide)
 
-
 // listen to mouse movement just after creating new blank pad
 
-// add button to reset grid
-resetButton = document.querySelector(".Reset-pad-and-choose-grid-size");
-
-// listener of the reset button to choose the number
-resetButton.addEventListener("click", function (){
+function resetAndChooseGrid(){
     let numberPerSide = prompt("Enter the number of square per side that you desire between 1 and 100");
     
     while(numberPerSide < 1  || numberPerSide > 100){
@@ -357,7 +357,7 @@ resetButton.addEventListener("click", function (){
     pad = document.querySelector(".content"); 
     content.remove();
     createGridElements(numberPerSide);
-});
+}
 
 
 // add listener to jamboard mode
