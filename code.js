@@ -266,7 +266,7 @@ function createGridElements(numberOfElements=16){
     title.textContent = "Play with it"
     buttons.append(title);    
 
-    names = ["Jamboard mode", "Rainbow mode", "Grey mode", "Permanent pen", "Eraser", "Clean"]
+    names = ["Jamboard mode", "Rainbow mode", "Grey mode", "Permanent pen", "Eraser", "Clean", "Reset pad and choose grid size"]
     for (let i = 0; i < names.length; i++){
         button = document.createElement("button");
         button.textContent = names[i];
@@ -299,7 +299,6 @@ function createGridElements(numberOfElements=16){
     cleanModeButton.addEventListener("click", activateCleanMode);    
     activateCleanMode.buttonState = 0;
 
-
     color_state = 0;
     jamboardState = 0;
     clickState = 0;
@@ -312,7 +311,7 @@ function createGridElements(numberOfElements=16){
     pad.classList.add("pad");
     content.append(pad);
 
-    min_width = 960/ numberOfElements;
+    min_width = 700 / numberOfElements;
     pad = document.querySelector(".pad");
     for (let i = 0; i < numberOfElements; i++){
         pad_line = document.createElement("div");
@@ -345,7 +344,7 @@ createGridElements(numberPerSide)
 // listen to mouse movement just after creating new blank pad
 
 // add button to reset grid
-resetButton = document.querySelector(".header button");
+resetButton = document.querySelector(".Reset-pad-and-choose-grid-size");
 
 // listener of the reset button to choose the number
 resetButton.addEventListener("click", function (){

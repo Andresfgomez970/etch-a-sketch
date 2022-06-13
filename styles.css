@@ -14,12 +14,11 @@ body{
     justify-content: space-between;
     padding: 8px;
     margin: 0px 20px;
-    gap: 40px;
+    gap: 100px;
 }
 
-
 .header h1{
-    font-size: 50px;
+    font-size: 40px;
     color: rgb(44, 172, 214);
 }
 
@@ -74,8 +73,8 @@ button{
 .pad{
    display: flex;
    flex-wrap: wrap;
-   min-height: 940px;
-   min-width: 940px;
+   min-height: 700px;
+   min-width: 700px;
    padding: 0px;
    margin: 10px;
    border-color: black;
@@ -90,4 +89,14 @@ button{
     padding: 8px;
     height: 40px;
     font-size: 28px;
+}
+
+.footer {
+    color: white;
+}
+
+.footer a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
